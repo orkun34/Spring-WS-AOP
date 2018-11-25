@@ -1,0 +1,32 @@
+<xs:schema targetNamespace="http://www.lombardi-soap-aop/Computer/" elementFormDefault="qualified"
+           attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:common="http://www.lombardi-soap-aop/Computer/">
+
+    <xs:element name="Computer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="RAM" type="xs:string"/>
+                <xs:element name="HDD" type="xs:string"/>
+                <xs:element name="Ghz" type="xs:double"/>
+                <xs:element name="Type" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="ComputerPartsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="computerType" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ComputerPartsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="common:Computer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+</xs:schema>
